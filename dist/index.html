@@ -12,17 +12,84 @@
         <script src="main.js" defer></script>
     </head>
     <body>
-        <header>
+        <nav>
             <h1>Mock Name</h1>
             <ul>
-                <li>Menu One</li>
-                <li>Menu Two</li>
-                <li>Menu Three</li>
-                <li>Menu Four</li>
-                <li>Menu Five</li>
-                <li>Menu Six</li>
+                <div class="list-container" id="two">
+                    <li>Menu One</li>
+                    <div id="dropdown-menu" class="inactive"></div>
+                </div>
+                <div class="list-container" id="two">
+                    <li>Menu Two</li>
+                    <div id="dropdown-menu" class="inactive"></div>
+                </div>
+                <div class="list-container" id="three">
+                    <li>Menu Three</li>
+                    <div id="dropdown-menu" class="inactive"></div>
+                </div>
+                <div class="list-container" id="four">
+                    <li>Menu Four</li>
+                    <div id="dropdown-menu" class="inactive"></div>
+                </div>
+                <div class="list-container" id="five">
+                    <li>Menu Five</li>
+                    <div id="dropdown-menu" class="inactive"></div>
+                </div>
+                <div class="list-container" id="six">
+                    <li>Menu Six</li>
+                    <div id="dropdown-menu" class="inactive"></div>
+                </div>
             </ul>
             </div>
-        </header>
+        </nav>
+        <main>
+            <div id="phone-size">
+                <div id="sidebar">
+                    <p class="exit">X</p>
+                    <div class="mobile-container">
+                        <h2>Menu One</h2>
+                    </div>
+                    <div class="mobile-container">
+                        <h2>Menu Two</h2>            
+                    </div>
+                    <div class="mobile-container">
+                        <h2>Menu Three</h2>          
+                    </div>
+                    <div class="mobile-container">
+                        <h2>Menu Four</h2>         
+                    </div>
+                    <div class="mobile-container">
+                        <h2>Menu Five</h2>        
+                    </div>
+                    <div class="mobile-container">
+                        <h2>Menu Six</h2>        
+                    </div>
+                </div>
+                <div id="mobile-dropdown-menu" class="inactive"></div>
+            </div>
+        </main>
+        <div id="image-slider">
+            <div id="slideshow">
+                <div id="one">Image One</div>
+                <div id="two">Image Two</div>
+                <div id="three">Image Three</div>
+                <div id="four">Image Four</div>
+                <div id="five">Image Five</div>
+            </div>
+        </div>
+        <div id="settings">
+            <div class="circles">
+                <div class="full one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
+            </div>
+            <div class="arrows">
+                <button id="left">Left</button>
+                <button id="right">Right</button>
+            </div>
+            <button id="slideshow-button">Slideshow</button>
+        </div>
     </body>
 </html>

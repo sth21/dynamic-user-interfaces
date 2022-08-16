@@ -36,13 +36,12 @@ ol, ul {
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans:wght@400;500;600&display=swap');
 
 :root {
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    background-color: white;
-    --grey: #48494a;
-    --lightgrey: #f2f2f2;
+    background-color: var(--off-white);
+    --off-white: #F5F5F5;
 }
 
 body {
@@ -50,13 +49,14 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template: 1fr 14fr / 1fr;
+    grid-template: 1fr 10fr 4fr 2fr/ 1fr;
 }
 
-header {
+nav {
     display: flex;
     align-items: center;
-    border-bottom: .1px solid var(--grey);
+    gap: 20px;
+    border-bottom: .1px solid black;
 }
 
 h1 {
@@ -70,27 +70,145 @@ h1 {
 }
 
 ul {
-    color: var(--grey);
     font-weight: 600;
     display: flex;
     align-items: center;
+    gap: 20px;
     height: 100%;
     list-style-position: inside;
 }
 
-li {
+.list-container, .mobile-container {
     display: flex;
-    position: relative;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
     height: 100%;
 }
 
-li:hover, h1:hover {
-    font-weight: bold;
-    color: black;
+.list-container {
+    position: relative;
+    width: 125px;
+}
+
+.mobile-container {
+    width: 100%;
+}
+
+.list-container:hover, h1:hover {
     padding-top: 2px;
     border-bottom: 2px solid black;
-    background-color: var(--lightgrey);
+}
+
+#dropdown-menu {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    top: calc(100% + 2px);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 2px solid transparent;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#phone-size {
+    display: grid;
+    grid-template: 1fr / 1fr 3fr;
+    height: 700px;
+    width: 400px;
+    border: 10px solid black;
+    border-radius: 25px;
+}
+
+#sidebar {
+    display: grid;
+    grid-template: repeat(7, 1fr) / 1fr;
+    align-items: center;
+    justify-items: center;
+    border-right: .1px solid black;
+}
+
+.exit {
+    font-size: 2.5rem;
+    color: red;
+}
+
+#mobile-dropdown-menu {
+    background-color: white;
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.clicked {
+    padding-left: 3px;
+    border-right: 3px solid black;
+    z-index: 1;
+}
+
+#image-slider {
+    position: relative;
+    justify-self: center;
+    align-self: flex-end;
+    background: transparent;
+    width: 20%;
+    height: 259.4px;
+    overflow: hidden;
+}
+
+#slideshow {
+    display: grid;
+    position: absolute;
+    grid-template: 1fr / repeat(5, 100%);
+    height: 259.4px;
+}
+
+#slideshow > * {
+    width: 99%;
+    height: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.circles {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.circles > * {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.arrows > * {
+    width: 160px;
+}
+
+#slideshow-button {
+    width: 325px;
+}
+
+.full {
+    background-color: green;
 }
