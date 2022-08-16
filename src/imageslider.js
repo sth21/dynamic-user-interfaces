@@ -61,7 +61,7 @@ const imageSliderDOM = (() => {
   };
   const carousel = () => {
     if (isSlideShow === false) {
-      myInterval = setInterval(shiftRight, 5000);
+      myInterval = setInterval(shiftRight, 2000);
       isSlideShow = true;
     } else {
       clearInterval(myInterval);
